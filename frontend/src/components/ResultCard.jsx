@@ -200,6 +200,21 @@ const ProbFill = styled(motion.div)`
   background: ${p => p.$color};
 `;
 
+const riskBg = (level) => {
+  if (level === 'critical') return 'rgba(255,51,102,0.1)';
+  if (level === 'high') return 'rgba(255,123,0,0.1)';
+  if (level === 'medium') return 'rgba(255,200,0,0.1)';
+  if (level === 'low') return 'rgba(0,255,136,0.1)';
+  return 'rgba(255,255,255,0.05)';
+};
+const riskColor = (level) => {
+  if (level === 'critical') return '#ff3366';
+  if (level === 'high') return '#ff7b00';
+  if (level === 'medium') return '#ffcc00';
+  if (level === 'low') return '#00ff88';
+  return 'var(--text-secondary)';
+};
+
 const RiskBadge = styled.div`
   display: inline-flex;
   align-items: center;
@@ -211,18 +226,8 @@ const RiskBadge = styled.div`
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-top: 0.5rem;
-  background: ${p => ({
-    critical: 'rgba(255,51,102,0.1)',
-    high: 'rgba(255,123,0,0.1)',
-    medium: 'rgba(255,200,0,0.1)',
-    low: 'rgba(0,255,136,0.1)',
-  }[p.$level] || 'rgba(255,255,255,0.05)')};
-  color: ${p => ({
-    critical: '#ff3366',
-    high: '#ff7b00',
-    medium: '#ffcc00',
-    low: '#00ff88',
-  }[p.$level] || 'var(--text-secondary)')};
+  background: ${p => riskBg(p.$level)};
+  color: ${p => riskColor(p.$level)};
   border: 1px solid currentColor;
   opacity: 0.9;
 `;
