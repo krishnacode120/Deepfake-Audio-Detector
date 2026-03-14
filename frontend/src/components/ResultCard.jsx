@@ -216,7 +216,7 @@ const RiskBadge = styled.div`
     high: 'rgba(255,123,0,0.1)',
     medium: 'rgba(255,200,0,0.1)',
     low: 'rgba(0,255,136,0.1)',
-  }[p.$level] || 'rgba(255,255,255,0.05)'}};
+  }[p.$level] || 'rgba(255,255,255,0.05)')};
   color: ${p => ({
     critical: '#ff3366',
     high: '#ff7b00',
