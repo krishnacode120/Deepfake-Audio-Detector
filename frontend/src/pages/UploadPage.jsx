@@ -225,7 +225,6 @@ const SLabel = styled.span`
 const fmtBytes = b => b<1024?`${b}B`:b<1048576?`${(b/1024).toFixed(1)}KB`:`${(b/1048576).toFixed(1)}MB`;
 const fmtDur   = s => s?`${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}`:null;
 
-const VIDEO_EXTS = new Set(['.mp4','.avi','.mov','.mkv','.webm','.flv','.wmv','.m4v']);
 const AUDIO_ACCEPT = {'audio/*':['.wav','.mp3','.flac','.ogg','.m4a']};
 const VIDEO_ACCEPT = {'video/*':['.mp4','.avi','.mov','.mkv','.webm','.flv','.wmv','.m4v']};
 

@@ -189,7 +189,7 @@ export default function WaveformPlayer({ audioFile, prediction }) {
         setCurrentTime(0);
       }
     };
-  }, [audioFile]);
+  }, [progressColor, waveColor,audioFile]);
 
   const togglePlay = () => {
     if (wavesurferRef.current) {

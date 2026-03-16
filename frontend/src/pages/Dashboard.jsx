@@ -239,7 +239,6 @@ const EmptyState = styled.div`
 
 const FAKE_COLOR = '#ff3366';
 const REAL_COLOR = '#00ff88';
-const BLUE_COLOR = '#0066ff';
 
 const CustomTooltip = ({ active, payload, label }) => {
   if (!active || !payload?.length) return null;
